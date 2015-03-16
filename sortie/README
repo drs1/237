@@ -1,0 +1,10 @@
+This is all pretty simple:
+       sortie.pdf	the lab writeup
+       sortie.c		The working C program, with insertionSort
+       isort.s		An alternative to insertionSort (isort)
+       d		some numeric data
+       ds		that data sorted
+       w		some long and short words
+       ws		the characters of those words, sorted
+       Makefile		the way things are done
+       README		yup.

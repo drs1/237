@@ -1,0 +1,27 @@
+//program that takes two command line arguments, a numerator and denominator
+//of a non negative fraction and outputs the binary representation with the
+//first portion of the repeated fractional digits printed in brackets
+//(c) 2014 drsmith
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  int n = atoi(argv[1]);
+  int d = atoi(argv[2]);
+
+  int *binary = malloc(25 * sizeof(int));
+  int *pos = calloc(d * sizeof(int));
+}
+
+
+void printBinary(int n, int d, int *binary, int *remainder, int digit){
+  *(remainder+(n%d)) = digit;
+  
+
+  *binary = n%d ? 1 : 0;
+
+
+  }
+}

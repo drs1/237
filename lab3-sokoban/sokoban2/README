@@ -1,0 +1,41 @@
+This directory contains the source for the sokoban puzzle.
+A curses-based implementation by Duane Bailey (c) 2010-14.
+
+It may be built by typing:
+   make sokoban
+
+You will see that this compiles and links sokoban.c with win.s.  Your job is
+to implement the win-checking procedure, win, in assembly.  This is documented
+in the lab sheet, found in sokoban2.pdf (on unix, you can gv sokoban2.pdf).
+
+A sample solution to last week's lab is found in win.c.  You may use this
+for the basis of your translation, if you wish.  You can build sokoban with
+the sample win.c by typing
+   make csokoban
+
+The examples directory, here, contains examples of assembly translation you
+may find useful in completing your work.
+
+The screens directory contains all the files necessary to play the game:
+  * there are 91 levels of play (screen.0-screen.90)
+  * there is a emacs work facade screen (WORK)
+  * there is a screen of help (HELP)
+Any of these may be edited as you see fit.
+
+To run sokoban, simply type:
+  sokoban
+To run it on a particular level (say 10), type:
+  sokoban 10
+There is a zero-level, for quick testing.  The program starts, by default, 
+at level 1.
+
+Most of these levels are quite hard.  You can find best-play records on the
+web.
+
+EDITS:
+The system keeps track of the player's biometric indicators.  You may wish
+to enter your birthday in win.c on the line:
+   int BDay[] = { <month>, <day>, <year> };
+
+Enjoy!
+ Duane

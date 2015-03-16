@@ -1,0 +1,8 @@
+;;; print binary representation of numbers encountered from input
+;;; (c) 2014 d.r.smith
+
+binary:
+	.data	21,28,31
+	
+main:
+	

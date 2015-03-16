@@ -1,0 +1,13 @@
+import sys
+for x in range(1,217483647/8):
+    binary=bin(x)
+    sys.stdout.write(binary[2:]+',')
+for x in range(217483647/8,217483647/4):
+    binary=bin(x)
+    sys.stdout.write(binary[2:]+',')
+for x in range(217483647/4,217483647/2):
+    binary=bin(x)
+    sys.stdout.write(binary[2:]+',')
+
+
+

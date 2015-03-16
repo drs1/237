@@ -1,0 +1,23 @@
+                              THE SOKOBAN PUZZLE
+                            by Hiroyuki Imabayashi
+
+Sokoban (``warehouse keeper'') is a puzzle where a worker (@) pushes
+boxes ($) into storage locations (.).  When all boxes have been stored
+away, the puzzle is solved.
+
+The warehouse keeper is only able to shove one box at a time, and boxes
+may not be pulled.  Because of this, it is possible that a box has been
+irretrievably shoved into a corner before it makes it to its storage
+location.  The puzzle is lost, and must be undone before play continues.
+
+The challenge is to solve the puzzle in the fewest moves possible.
+
+Symbols: @ = worker    $ = box    . = storage area    # = wall
+         * = worker in storage area    * = box in storage area
+
+Keys: ^N  Move worker up one line       ^P  Move worker down one line
+      ^B  Move worker left one space    ^F  Move worker right one space
+      ^_  Backup one move (undo)        ^U  Repeat next command 4 times
+      SPACE Put up emacs facade         ?   Get help
+                         ^G  Give up playing sokoban
+                      (Press any key to return to play.)

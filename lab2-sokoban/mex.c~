@@ -1,0 +1,15 @@
+//a program for finding a missing number integer
+//(c) 2014 danny r. smith
+
+int main(int argc, charr **argv)
+{
+  int c;
+  int next = 0;
+  while( EOF != (c=fgetc(stdin))){
+    if( c == next ){
+      next++;
+    }else{
+      return 0;
+    }
+  }
+}

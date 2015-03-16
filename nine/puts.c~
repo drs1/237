@@ -1,0 +1,17 @@
+#include stdio.h
+
+
+void puts(char *s);
+
+int main(int argc, char **argv){
+  puts('Hello World');
+}
+
+void puts( char *s){
+  
+  while( *s != '\0'){
+    putchar( *(s++));
+  }
+  putchar('\n');
+ 
+}

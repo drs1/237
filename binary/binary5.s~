@@ -1,0 +1,8 @@
+;;; a program that prints out the binary representation of the numbers it encounters
+;;; (c) d.r.smith
+main:	swi	#SysGetNum
+	str	r0,[sp,#1]
+	mov	r1, #4032
+	ldm	sp,r1
+	swi	#SysHalt
+	

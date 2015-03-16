@@ -1,0 +1,38 @@
+// a program to provide all the equivalent codes given a decimal number
+// (c) d.r.smith
+// a slight derivation of the two towers problem, using the binary
+// representation of a number to specify subsets
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main( int argc, char **argv)
+{
+  char *code_char = argv[1];
+  int i;
+  int *code = malloc(6 * sizeof(int));
+  for(i=0;i<6;i++){
+    *(code+i) = *(code_char+i)-'0';
+  }
+  int subset = 0;
+  int *complement = [9,2,1,4,3,6,5,8,7,0,9]
+  while( subset < 32 ){
+    int index;             //the digit in the access code we are concerned with
+    int new_access = 0;
+    for(index = 0; index < 6; index++){
+      //depending on the subset, for each digit in the access code, we
+      //either flip that digit to its respective partner, i.e. 1 becomes 2, 
+      //3 becomes 4, 4 becomes 3 etc.. or, we leave the value be. 
+      int flip = 1;
+      flip << index;       //32, 16, 8, 4, 2, or 1
+      int old = *(code+5-index);
+      int new = old;
+      if(subset & flip){
+
+      }
+    }
+    printf("%d \n", new_access);
+    subset++;
+  }
+  return 0;
+}

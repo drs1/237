@@ -1,0 +1,28 @@
+//a program that outputs the integer radical of a given number
+// (c) drsmith
+
+#include <stdio.h>
+int main( int argc, char **argv)
+{
+  int last = 0;
+  int n,rad,i;
+
+  scanf("%d", &n);
+  rad(n);
+}
+
+int rad(n){
+  int rad = 1;
+}
+
+
+  while(n > 1){
+    if( n%i == 0){
+      if( i != last ){
+	rad *= i;
+      }
+      //divide the factor we found
+      n/=i;
+      last = i;
+    }
+  }

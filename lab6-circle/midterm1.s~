@@ -1,0 +1,47 @@
+	# call frame
+	# diwas    -24
+	# hlp      -19
+	# dst	   -18
+	# src      -17
+	# s	   -16
+	# l	   -8
+	# g	   -4  
+	# old bp   +0
+
+
+	.equ	hlp, -19
+	.equ	dst, -18
+	.equ	src, -17
+	.equ	s, -16
+	.equ	l, -8
+	.equ	g, -4
+
+
+g2toh:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$24, %rsp
+
+
+	movl	
+	
+	cmpl	$0, %esi
+	jz	endzero
+else:	decl	%esi
+	movl	$1
+	
+
+
+
+
+
+
+
+
+
+
+
+ezero:	movq	$0, %rax
+	ret	
+	
+	

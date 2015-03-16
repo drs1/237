@@ -1,0 +1,16 @@
+//program that takes two inputs, a numerator and a denominator, and prints the quotients of it's
+//continued fractions
+//(c) d.r.smtih
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+  int numator = atoi(argv[1]);
+  int denator = atoi(argv[2]);
+  
+  printf("%d",numator/denator);
+
+
+}

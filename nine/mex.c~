@@ -1,0 +1,43 @@
+//a program that returns the minimum excluded integer in a list.
+// (c) d.r.smith
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int cf(const void *a, const void*b);
+int main(int argc, char **argv)
+{
+  int num;
+  int size=64;
+  long *array = malloc(size*sizeof(int));
+  long pos = 0;
+  //read in
+  while( EOF != (scanf("%d",&num))){
+    if(pos > (size/2)){
+      array = realloc(array, (size*=2)*sizeof(int));
+    }
+    *(array+(pos++)) = num;
+  }
+  qsort(array, pos, sizeof(long), cf);
+
+  //print the array
+  //  int i;
+  //  for(i = 0; i<pos; i++){
+  //    printf("%ld \n",*(array+i));
+  //  } 
+  //  return 0;
+  int check = 0;
+  int next = 1;
+  while(next < pos){
+    if(! (*(array+check) == *(array+next) || (*(array+check)+1 == *(array+next)))){
+      printf("mex -> %ld \n",*(array+check)+1);
+      return 0;
+    }
+    check = next++;
+  }
+
+  return 0;
+}
+int cf( const void *a, const void *b){
+  return ( *(long*)a - *(long*)b);
+}

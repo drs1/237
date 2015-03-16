@@ -1,0 +1,14 @@
+//a program that returns the minimum excluded integer in a list.
+// (c) d.r.smith
+
+int main(int argc, char **argv)
+{
+  int num;
+  while( EOF != (scanf("%d",&num))){
+    printf("%d",num);
+  }
+
+
+
+
+}

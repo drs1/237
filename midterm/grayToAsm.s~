@@ -1,0 +1,8 @@
+
+
+	movl	i(%rbp), %rdi
+	movl	%rdi, test(%rbp)
+	movl	test(%rbp), %rsi
+	cmpl	$0, %rsi
+	je	over
+	

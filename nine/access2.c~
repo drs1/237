@@ -1,0 +1,67 @@
+// a program to provide all the equivalent codes given a decimal number
+// (c) d.r.smith
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void deconstruct(char *code, int len);
+int main(int argc, char **argv)
+{
+  if(! argv[1]){
+    printf("Just turn the handle you twit. \n");
+  }else{
+    char *code = argv[1];
+    int len = strlen(code);
+    int i;
+    for(i = 0; i<len; i++){
+      *(code+i)-= '0';
+      printf("code %d \n", *(code+i));
+    }
+    deconstruct(code,len);
+  }
+  return 0;
+}
+void deconstruct(char *code, int len)
+{
+  int subset = 1;
+  while(subset<1<<len){
+    int *new_access = malloc(len*sizeof(int));
+    int index;
+    for(index = 0; index < len; index++){
+      int flip = 1<<index;
+      int out = *(code+index);
+      if(subset & flip){
+	if(out == 0){
+	  out = 9;
+	}else if(out&1){
+	  out = (out+1)%10;
+	}else{
+	  out = (out-1)%10;
+	}
+      }
+      *(new_access+index) = out;
+      int t = len;
+      int i=0;
+      while(i<t){
+      	printf("%d",*(new_access+i));
+	i++;
+      }
+    }
+    subset++;
+  }
+}
+	  //printf("yes \n");
+      //printf("did it even get here?");
+        //      printf("subset yes \n");
+       //      printf("%d\n",index);
+      //      printf(" out -> %d \n", out);
+
+      //      printf("\n");
+	  //	  printf("did it get here");
+	//	out = (out+1)%10;
+/* puts(code_char); */
+  /* int length = strlen(code_char); */
+  /* printf("%d \n",length);  */
+
+  /* printf("%d \n",code);  */

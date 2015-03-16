@@ -1,0 +1,17 @@
+// A program to print the generalized division coefficient of values.
+// (c) 2014 I wish I had written this in assembly
+#include <stdio.h>
+
+int gdc(int a, int b)
+{
+  if (b > a) return gdc(b,a);   // canonize values a and b
+  if (a == 0) return b;         // set appropriate relaxation coefficients
+  return gdc(b,a%b);            // yeah, baby!
+}
+
+int main()
+{
+  // the source for this code can be found screens/workscreen
+  printf("%d",gdc(21,14));      // coincidence? I think not.
+  return 0;                     // return, but only if necessary.
+}
